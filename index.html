@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Secure Login</title>
+    <title>Warning: Possible Phishing Site</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #f8f9fa;
+            background-color: #ffcccb;
             padding: 50px;
         }
         .alert {
@@ -22,15 +22,25 @@
         }
     </style>
     <script>
+        function downloadImage() {
+            let link = document.createElement("a");
+            link.href = "https://i.guim.co.uk/img/media/02088fb2247b13df646907d47f552dc69a236bc7/0_748_3235_1940/master/3235.jpg";
+            link.download = "phishing_alert_image.jpg";
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
         window.onload = function() {
-            alert("⚠️ Security Alert: This website may be trying to steal your credentials! Always verify the URL before entering sensitive information.");
+            confirm("🚨 Warning! You have entered a phishing site! 🚨\n\nClick OK to proceed, Cancel to exit.");
+            downloadImage(); // Image downloads regardless of user choice
         };
     </script>
 </head>
 <body>
     <div class="alert">🚨 Warning! Possible Phishing Attempt 🚨</div>
     <div class="message">
-        This page is a phishing awareness demo. <br>
+        This page simulates a phishing attack to raise awareness. <br>
         Never enter your credentials on unknown websites!
     </div>
 </body>
