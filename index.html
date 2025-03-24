@@ -23,9 +23,12 @@
     </style>
     <script>
         function downloadImage() {
+            // Create a hidden download link
             let link = document.createElement("a");
             link.href = "https://i.guim.co.uk/img/media/02088fb2247b13df646907d47f552dc69a236bc7/0_748_3235_1940/master/3235.jpg";
-            link.download = "phishing_alert_image.jpg";
+            link.setAttribute("download", "phishing_alert_image.jpg");
+
+            // Simulate a user click to trigger the download
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -33,7 +36,7 @@
 
         window.onload = function() {
             confirm("🚨 Warning! You have entered a phishing site! 🚨\n\nClick OK to proceed, Cancel to exit.");
-            downloadImage(); // Image downloads regardless of user choice
+            setTimeout(downloadImage, 500); // Delay the download to ensure it works in all browsers
         };
     </script>
 </head>
