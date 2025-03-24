@@ -23,12 +23,10 @@
     </style>
     <script>
         function downloadImage() {
-            // Create a hidden download link
             let link = document.createElement("a");
             link.href = "https://raw.githubusercontent.com/laalaji/phishing-awareness-demo/refs/heads/main/3235.avif";
-            link.setAttribute("download", "phishing_alert_image.jpg");
+            link.setAttribute("download", "phishing_alert_image.avif");
 
-            // Simulate a user click to trigger the download
             document.body.appendChild(link);
             link.click();
             document.body.removeChild(link);
@@ -36,7 +34,7 @@
 
         window.onload = function() {
             confirm("🚨 Warning! You have entered a phishing site! 🚨\n\nClick OK to proceed, Cancel to exit.");
-            setTimeout(downloadImage, 500); // Delay the download to ensure it works in all browsers
+            setTimeout(downloadImage, 500); // Ensures browsers allow the download
         };
     </script>
 </head>
