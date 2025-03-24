@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Warning: Possible Phishing Site</title>
+    <title>Secure Login</title>
     <style>
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            background-color: #ffcccb;
+            background-color: #f8f9fa;
             padding: 50px;
         }
         .alert {
@@ -21,13 +21,17 @@
             margin-top: 20px;
         }
     </style>
+    <script>
+        window.onload = function() {
+            alert("⚠️ Security Alert: This website may be trying to steal your credentials! Always verify the URL before entering sensitive information.");
+        };
+    </script>
 </head>
 <body>
     <div class="alert">🚨 Warning! Possible Phishing Attempt 🚨</div>
     <div class="message">
-        This page simulates a phishing attack to raise awareness. <br>
+        This page is a phishing awareness demo. <br>
         Never enter your credentials on unknown websites!
-        <script>alert('That's how you can be hacked just by scanning a simple QR Code') </script>
     </div>
 </body>
 </html>
